@@ -2,6 +2,8 @@
 
 A Streamlit dashboard for running quick A/B tests on numeric, binary, and categorical metrics. Upload experiment data or explore the bundled sample dataset, select the right metric type, and review statistical results with confidence intervals and effect sizes.
 
+**Live demo:** https://abtestlab.streamlit.app/
+
 ## Features
 - Load data from CSV or use an auto-generated sample dataset for demos.
 - Auto-detect the metric type with the option to override.
@@ -12,13 +14,17 @@ A Streamlit dashboard for running quick A/B tests on numeric, binary, and catego
   - Chi-square test (with Cramer's V) for categorical distributions
 - Inline explanations, data previews, and a notes panel to capture findings.
 
-## Requirements
+## Try It Your Way
+- **Use the hosted version** when you need a quick walkthrough or want to share results: [abtestlab.streamlit.app](https://abtestlab.streamlit.app/).
+- **Run it locally** if you prefer to work offline, analyze sensitive datasets, or tweak the code.
+
+## Local Requirements
 - Python 3.9+
 - pip packages: `streamlit`, `pandas`, `numpy`, `scipy`
 
 > The repository includes a local virtual environment in `dev_env/`; you can ignore it if you prefer creating your own.
 
-## Quick Start
+## Local Quick Start
 1. (Optional) Create and activate a virtual environment:
    ```bash
    python3 -m venv .venv
@@ -26,7 +32,7 @@ A Streamlit dashboard for running quick A/B tests on numeric, binary, and catego
    ```
 2. Install dependencies:
    ```bash
-   pip install streamlit pandas numpy scipy
+   pip install -r requirements.txt
    ```
 3. Launch the app:
    ```bash
