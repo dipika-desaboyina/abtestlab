@@ -381,7 +381,7 @@ st.success("All done! You can tweak the selections above or upload a new dataset
 st.sidebar.markdown("---")
 st.sidebar.markdown("Need help? Please visit https://github.com/dipika-desaboyina/abtestlab.\n")
 st.sidebar.markdown("---")
-st.sidebar.markdwon("Here is a sample Kaggle dataset you can use for testing - https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing.")
+st.sidebar.markdown("Here is a sample Kaggle dataset you can use for testing - https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing.")
 st.sidebar.markdown("---")
 st.sidebar.markdown(
     "- Metric must be measured per row.\n"
