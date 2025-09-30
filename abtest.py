@@ -369,7 +369,7 @@ except ValueError as exc:  # pragma: no cover - runtime safeguard for user data
     st.error(str(exc))
 
 
-st.subheader("4. Document your findinghttps://github.com/dipika-desaboyina/abtestlab.gits")
+st.subheader("4. Document your findings")
 st.text_area(
     "Add experiment notes (optional)",
     placeholder="Summarize the takeaways, business impact, next steps...",
@@ -379,7 +379,7 @@ st.text_area(
 st.success("All done! You can tweak the selections above or upload a new dataset to run another test.")
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Need help?")
+st.sidebar.subheader("Need help? Please visit https://github.com/dipika-desaboyina/abtestlab.gits")
 st.sidebar.markdown(
     "- Metric must be measured per row.\n"
     "- Group column should identify the two variants.\n"
