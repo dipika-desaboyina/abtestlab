@@ -379,9 +379,10 @@ st.text_area(
 st.success("All done! You can tweak the selections above or upload a new dataset to run another test.")
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Need help? Please visit https://github.com/dipika-desaboyina/abtestlab.gits")
+st.sidebar.subheader("Need help? Please visit https://github.com/dipika-desaboyina/abtestlab")
 st.sidebar.markdown(
     "- Metric must be measured per row.\n"
     "- Group column should identify the two variants.\n"
     "- For binary metrics, pick the value that counts as a success."
 )
+
