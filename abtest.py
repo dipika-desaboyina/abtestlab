@@ -11,7 +11,7 @@ from scipy import stats
 st.set_page_config(page_title="A/B Test Lab", layout="wide")
 st.title("A/B Test Lab")
 st.caption(
-    "Upload your experiment data, choose the metric type, and run the appropriate test "
+    "Upload your data, choose the metric type, and run the appropriate test "
     "to see whether Variant B performs differently from Variant A."
 )
 
@@ -37,21 +37,21 @@ def load_data(uploaded_file) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner=False)
-def load_sample_data(seed: int = 42) -> pd.DataFrame:
+def load_sample_data(seed: int = 55) -> pd.DataFrame:
     """Generate a small synthetic dataset covering numeric, binary, and categorical metrics."""
     rng = np.random.default_rng(seed)
 
     n_obs = 400
-    groups = rng.choice(["Control", "Variant"], size=n_obs, p=[0.5, 0.5])
+    groups = rng.choice(["Variant A", "Variant B"], size=n_obs, p=[0.5, 0.5])
     base_metric = rng.normal(loc=50, scale=10, size=n_obs)
-    lift = np.where(groups == "Variant", 4.0, 0.0)
+    lift = np.where(groups == "Variant B", 4.0, 0.0)
     revenue = base_metric + lift + rng.normal(scale=5, size=n_obs)
 
-    conversion_prob = np.where(groups == "Variant", 0.62, 0.55)
+    conversion_prob = np.where(groups == "Variant B", 0.62, 0.55)
     converted = rng.binomial(1, conversion_prob)
 
     support_topics = np.where(
-        groups == "Variant",
+        groups == "Variant B",
         rng.choice(["Billing", "Technical", "Other"], p=[0.4, 0.45, 0.15], size=n_obs),
         rng.choice(["Billing", "Technical", "Other"], p=[0.5, 0.35, 0.15], size=n_obs),
     )
@@ -369,7 +369,7 @@ except ValueError as exc:  # pragma: no cover - runtime safeguard for user data
     st.error(str(exc))
 
 
-st.subheader("4. Document your findings")
+st.subheader("4. Document your findinghttps://github.com/dipika-desaboyina/abtestlab.gits")
 st.text_area(
     "Add experiment notes (optional)",
     placeholder="Summarize the takeaways, business impact, next steps...",
